@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 
 interface PostFormProps {
   onAddPost: (username: string, content: string) => void;
+  
 }
 
 const PostForm: React.FC<PostFormProps> = ({ onAddPost }) => {

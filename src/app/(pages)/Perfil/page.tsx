@@ -9,7 +9,6 @@ const Perfil: React.FC = () => {
   const { user } = useUser();
   const router = useRouter();
   const { logout } = useUser();
-  const [filterUsername, setFilterUsername] = useState<string | null>(null);
 
   if (!user) {
     router.push('/Login');
@@ -41,7 +40,7 @@ const Perfil: React.FC = () => {
       <div className="mt-8">
         <h3 className="text-xl font-bold mb-4 text-gray-200">Posts</h3>
         <div className="space-y-4">
-            <FilteredPostsComponent filterUsername="gabs" />
+            <FilteredPostsComponent filterUsername={user.username} />
         </div>
       </div>
     </div>

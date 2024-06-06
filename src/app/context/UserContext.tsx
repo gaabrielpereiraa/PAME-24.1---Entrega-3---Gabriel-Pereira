@@ -1,9 +1,7 @@
 "use client";
 
-import { parse } from 'path';
 import React, { createContext, useState, useContext, ReactNode } from 'react';
 import { useRouter } from 'next/navigation';
-import { Router } from 'react-router-dom';
 
 interface User {
     email: string;

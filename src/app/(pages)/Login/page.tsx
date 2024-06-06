@@ -7,6 +7,7 @@ import { useUser } from '../../context/UserContext';
 const Login: React.FC = () => {
     const router = useRouter();
     const { login } = useUser();
+    const { user } = useUser();
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
@@ -14,7 +15,7 @@ const Login: React.FC = () => {
         event.preventDefault();
         login(email, password);
         router.push('/');
-        alert('Logado com sucesso!');
+        if (user) alert('Logado com sucesso!')
     };
   return (
       <div className="w-screen h-screen flex bg-zinc-950 items-center" >

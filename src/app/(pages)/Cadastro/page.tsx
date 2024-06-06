@@ -1,6 +1,5 @@
 "use client";
 
-import Sidebar from "../../components/sidebar"
 import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { useUser } from '../../context/UserContext';
@@ -14,7 +13,7 @@ const Cadastro: React.FC = () => {
 
     const handleSubmit = (event: React.FormEvent) => {
         event.preventDefault();
-        register(email, password, username);
+        register(email, password, username, '', 0, 0, []);
         router.push('/Login');
     };
   return (

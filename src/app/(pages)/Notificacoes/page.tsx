@@ -1,7 +1,9 @@
-import Sidebar from "../../components/sidebar"
+import React from 'react';
 
 export default function Perfil(){
   return (
-    <div></div>
+    <div>
+      <h1 className="text-gray-200 text-bold">Notificações</h1>
+    </div>
   );
 }
